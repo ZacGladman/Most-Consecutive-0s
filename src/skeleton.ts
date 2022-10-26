@@ -4,8 +4,26 @@
  * @param b - the second number to add
  * @returns the total
  */
-function sum(a: number, b: number): number {
-  return a + b;
+function mostConsecutiveZeroes(number: number): number {
+  let maxSoFar = 1;
+  let numArr = removeNonZeroes(number);
+  let filteredArr = numArr.join('').split('1');
+  for(let string of filteredArr){
+    if(string.length > maxSoFar){
+      maxSoFar = string.length
+    }
+  }
+  return maxSoFar
 }
 
-export default sum;
+function removeNonZeroes(number: number): string[] {
+  let numArr = number.toString().split('');
+  for(let i = 0; i<numArr.length; i++){
+    if(numArr[i] !== '0'){
+      numArr[i] = '1'
+    }
+  }
+  return numArr
+}
+
+export default mostConsecutiveZeroes;
