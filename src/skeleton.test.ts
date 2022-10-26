@@ -1,7 +1,7 @@
 import mostConsecutiveZeroes from "./skeleton";
 
 test("Filters out consecutive non-zero values", () => {
-  expect(mostConsecutiveZeroes(100000999954200490909080000020000000000000000000000200000)).toBe(22);
+  expect(mostConsecutiveZeroes(10000000341005)).toBe(7);
   expect(mostConsecutiveZeroes(1111011111001)).toBe(2)
   });
 
